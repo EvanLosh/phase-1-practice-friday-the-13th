@@ -26,7 +26,7 @@ fetch("http://localhost:3000/movies")
     .then((res) => {
         //renderMovie(res)
         for (renderImage in res ){
-            renderMovie(renderImage)  
+            renderMovie(res[renderImage])
             console.log(renderImage)
         }
 
