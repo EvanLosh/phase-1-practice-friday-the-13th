@@ -14,9 +14,9 @@ function renderMovie(x) {
     // append the list item with an image tag
     moviesList.append(listItem)
     // add an image tag
-    const image = document.createElement("img")
-    image.src = x[0].image
-    listItem.append(image)
+    const imageVar = document.createElement("img")
+    imageVar.src = x.image
+    listItem.append(imageVar)
     // add a source link to the image tag
 }
 
@@ -24,8 +24,14 @@ function renderMovie(x) {
 fetch("http://localhost:3000/movies")
     .then(res => res.json())
     .then((res) => {
-        renderMovie(res)
+        //renderMovie(res)
+        for (renderImage in res ){
+            renderMovie(renderImage)  
+            console.log(renderImage)
+        }
+
     })
+
 
 // function getLink(x) {
 //     return fetch("http://localhost:3000/movies")

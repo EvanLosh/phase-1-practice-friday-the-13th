@@ -99,3 +99,4 @@ input[type=submit] {
     box-sizing: border-box;
     margin-top: 10px;
 }
+ul { list-style-type: none }
